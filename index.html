@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Michell Campos – Estudiante de Arquitectura en la Universidad Nacional de Ingeniería (UNI), Lima, Perú. Portafolio profesional de proyectos arquitectónicos, urbanismo y diseño digital." />
+  <meta name="keywords" content="arquitectura, portafolio, UNI, Lima, Michell Campos, arquitecto, urbanismo, BIM, Revit, SketchUp" />
+  <meta name="author" content="Michell Campos" />
+  <meta property="og:title" content="Michell Campos – Arquitectura & Diseño" />
+  <meta property="og:description" content="Portafolio profesional de arquitectura, urbanismo y representación digital." />
+  <meta property="og:type" content="website" />
+  <title>Michell Campos – Arquitectura & Diseño</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1/src/index.js" defer></script>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ───────── NAVBAR ───────── -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="nav-container">
+      <a href="#inicio" class="nav-logo" aria-label="Inicio">
+        <span class="logo-name">MC</span>
+        <span class="logo-dot"></span>
+      </a>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+        <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+        <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+        <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
+        <li><a href="#logros" class="nav-link">Logros</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+      <button class="nav-cta" onclick="scrollToSection('contacto')" aria-label="Contactar">Contactar</button>
+      <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ───────── HERO ───────── -->
+  <section class="hero" id="inicio" aria-label="Presentación principal">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-bg-lines">
+      <div class="h-line h-line-1"></div>
+      <div class="h-line h-line-2"></div>
+      <div class="h-line h-line-3"></div>
+      <div class="v-line v-line-1"></div>
+      <div class="v-line v-line-2"></div>
+    </div>
+    <div class="hero-container">
+      <div class="hero-badge fade-in" data-delay="100">
+        <span class="badge-dot"></span>
+        Lima, Perú — 2026
+      </div>
+      <div class="hero-main">
+        <div class="hero-text fade-in" data-delay="200">
+          <p class="hero-pre">Michell Campos</p>
+          <h1 class="hero-title">
+            Arquitectura<br />
+            <em>&amp; Visión</em><br />
+            Urbana
+          </h1>
+          <p class="hero-subtitle">Estudiante de Arquitectura · UNI · Lima, Perú</p>
+          <blockquote class="hero-quote">
+            "Diseñando espacios con visión urbana,<br />innovación y sostenibilidad."
+          </blockquote>
+          <div class="hero-actions fade-in" data-delay="400">
+            <button class="btn-primary" onclick="scrollToSection('proyectos')" id="hero-projects-btn">Ver Proyectos</button>
+            <button class="btn-secondary" onclick="scrollToSection('contacto')" id="hero-contact-btn">Conversemos</button>
+          </div>
+        </div>
+        <div class="hero-visual fade-in" data-delay="300">
+          <div class="hero-card-main">
+            <div class="hc-tag">Arquitectura · Urbanismo · BIM</div>
+            <div class="hc-arch-diagram">
+              <svg viewBox="0 0 320 280" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- Floor plan sketch -->
+                <rect x="40" y="40" width="240" height="200" stroke="#C7B299" stroke-width="1.5" fill="none"/>
+                <rect x="40" y="40" width="100" height="90" stroke="#C7B299" stroke-width="1" fill="#E6D5BE" fill-opacity="0.3"/>
+                <rect x="40" y="130" width="100" height="110" stroke="#C7B299" stroke-width="1" fill="#E6D5BE" fill-opacity="0.2"/>
+                <rect x="140" y="40" width="140" height="60" stroke="#C7B299" stroke-width="1" fill="#D8C3A5" fill-opacity="0.3"/>
+                <rect x="140" y="100" width="70" height="140" stroke="#C7B299" stroke-width="1" fill="#E6D5BE" fill-opacity="0.2"/>
+                <rect x="210" y="100" width="70" height="140" stroke="#C7B299" stroke-width="1" fill="#D8C3A5" fill-opacity="0.2"/>
+                <!-- Dimensions -->
+                <line x1="40" y1="260" x2="280" y2="260" stroke="#7A6C5D" stroke-width="0.5" stroke-dasharray="2,3"/>
+                <line x1="300" y1="40" x2="300" y2="240" stroke="#7A6C5D" stroke-width="0.5" stroke-dasharray="2,3"/>
+                <!-- Labels -->
+                <text x="155" y="275" font-family="Inter" font-size="8" fill="#7A6C5D" text-anchor="middle">12.00 m</text>
+                <text x="313" y="145" font-family="Inter" font-size="8" fill="#7A6C5D" text-anchor="middle" transform="rotate(90,313,145)">10.00 m</text>
+                <!-- North arrow -->
+                <circle cx="280" cy="60" r="14" stroke="#C7B299" stroke-width="1" fill="none"/>
+                <polygon points="280,50 276,65 280,62 284,65" fill="#C7B299"/>
+                <text x="280" y="58" font-family="Inter" font-size="9" fill="#2F2F2F" text-anchor="middle">N</text>
+                <!-- Compass dots -->
+                <circle cx="280" cy="200" r="3" fill="#C7B299"/>
+                <circle cx="280" cy="200" r="6" stroke="#C7B299" stroke-width="0.5" fill="none"/>
+              </svg>
+            </div>
+            <div class="hc-stats">
+              <div class="hc-stat">
+                <span class="hc-stat-num">6+</span>
+                <span class="hc-stat-label">Años estudiantiles</span>
+              </div>
+              <div class="hc-stat-div"></div>
+              <div class="hc-stat">
+                <span class="hc-stat-num">12+</span>
+                <span class="hc-stat-label">Herramientas</span>
+              </div>
+              <div class="hc-stat-div"></div>
+              <div class="hc-stat">
+                <span class="hc-stat-num">4</span>
+                <span class="hc-stat-label">Certificaciones</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-card-side">
+            <div class="hcs-label">Especialidades</div>
+            <div class="hcs-items">
+              <span>Diseño Arquitectónico</span>
+              <span>Urbanismo</span>
+              <span>Visualización BIM</span>
+              <span>Sostenibilidad</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator fade-in" data-delay="600">
+      <div class="scroll-line"></div>
+      <span>Desplazar</span>
+    </div>
+  </section>
+
+  <!-- ───────── SOBRE MÍ ───────── -->
+  <section class="section about-section" id="sobre-mi" aria-labelledby="about-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-number">01</span>
+        <h2 class="section-title" id="about-title">Sobre mí</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal" data-delay="100">
+          <p class="about-lead">Soy estudiante de Arquitectura en la <strong>Universidad Nacional de Ingeniería (UNI)</strong>, apasionado por el diseño arquitectónico, el urbanismo y la representación digital.</p>
+          <p>Mi enfoque combina funcionalidad, sostenibilidad e innovación para desarrollar proyectos que mejoren la calidad del entorno construido. Me interesa el diseño de vivienda, equipamientos urbanos, planificación territorial y la integración de tecnologías digitales como BIM y visualización arquitectónica.</p>
+          <div class="about-details">
+            <div class="detail-item">
+              <i class="ph ph-map-pin"></i>
+              <span>Lima, Perú</span>
+            </div>
+            <div class="detail-item">
+              <i class="ph ph-graduation-cap"></i>
+              <span>UNI – Arquitectura (2019 – Actualidad)</span>
+            </div>
+            <div class="detail-item">
+              <i class="ph ph-buildings"></i>
+              <span>27 años</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-edu reveal" data-delay="200">
+          <h3 class="about-edu-title">Educación</h3>
+          <div class="edu-card">
+            <div class="edu-year">2019 — Actualidad</div>
+            <div class="edu-info">
+              <div class="edu-degree">Arquitectura y Urbanismo</div>
+              <div class="edu-school">Universidad Nacional de Ingeniería</div>
+              <div class="edu-loc"><i class="ph ph-map-pin"></i> Lima, Perú</div>
+            </div>
+          </div>
+          <h3 class="about-edu-title mt-2">Certificaciones</h3>
+          <div class="certs-list">
+            <div class="cert-item reveal" data-delay="250">
+              <i class="ph ph-certificate"></i>
+              <span>Autodesk Revit Arquitectura Básico</span>
+            </div>
+            <div class="cert-item reveal" data-delay="300">
+              <i class="ph ph-certificate"></i>
+              <span>Autodesk Revit Arquitectura Intermedio</span>
+            </div>
+            <div class="cert-item reveal" data-delay="350">
+              <i class="ph ph-certificate"></i>
+              <span>Twinmotion para Arquitectura</span>
+            </div>
+            <div class="cert-item reveal" data-delay="400">
+              <i class="ph ph-certificate"></i>
+              <span>Renderizado Arquitectónico</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── HABILIDADES ───────── -->
+  <section class="section skills-section" id="habilidades" aria-labelledby="skills-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-number">02</span>
+        <h2 class="section-title" id="skills-title">Habilidades</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-intro reveal">
+        <p>Dominio de herramientas de diseño, modelado BIM, visualización y producción digital para arquitectura.</p>
+      </div>
+      <div class="skills-grid">
+
+        <!-- CAD / BIM -->
+        <div class="skill-category reveal" data-delay="100">
+          <h3 class="skill-cat-title">CAD & BIM</h3>
+          <div class="skill-cards">
+            <div class="skill-card" data-progress="90" id="skill-autocad">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="8" fill="#E6D5BE"/><text x="20" y="26" font-family="Inter" font-size="12" font-weight="700" fill="#7A6C5D" text-anchor="middle">AC</text></svg>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">AutoCAD</span>
+                <span class="skill-level">Avanzado</span>
+              </div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="90"></div></div>
+            </div>
+            <div class="skill-card" data-progress="80" id="skill-revit">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="8" fill="#E6D5BE"/><text x="20" y="26" font-family="Inter" font-size="12" font-weight="700" fill="#7A6C5D" text-anchor="middle">RV</text></svg>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">Revit</span>
+                <span class="skill-level">Intermedio</span>
+              </div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="80"></div></div>
+            </div>
+            <div class="skill-card" data-progress="85" id="skill-archicad">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="8" fill="#E6D5BE"/><text x="20" y="26" font-family="Inter" font-size="11" font-weight="700" fill="#7A6C5D" text-anchor="middle">ArC</text></svg>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">ArchiCAD</span>
+                <span class="skill-level">Avanzado</span>
+              </div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="85"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modelado 3D -->
+        <div class="skill-category reveal" data-delay="150">
+          <h3 class="skill-cat-title">Modelado 3D</h3>
+          <div class="skill-cards">
+            <div class="skill-card" id="skill-sketchup">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="8" fill="#E6D5BE"/><text x="20" y="26" font-family="Inter" font-size="11" font-weight="700" fill="#7A6C5D" text-anchor="middle">SKU</text></svg>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">SketchUp</span>
+                <span class="skill-level">Avanzado</span>
+              </div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="88"></div></div>
+            </div>
+            <div class="skill-card" id="skill-rhino">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="8" fill="#E6D5BE"/><text x="20" y="26" font-family="Inter" font-size="11" font-weight="700" fill="#7A6C5D" text-anchor="middle">RHN</text></svg>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">Rhinoceros</span>
+                <span class="skill-level">Intermedio</span>
+              </div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="70"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Render & Visualización -->
+        <div class="skill-category reveal" data-delay="200">
+          <h3 class="skill-cat-title">Render & Visualización</h3>
+          <div class="skill-cards">
+            <div class="skill-card" id="skill-twinmotion">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="8" fill="#E6D5BE"/><text x="20" y="26" font-family="Inter" font-size="11" font-weight="700" fill="#7A6C5D" text-anchor="middle">TW</text></svg>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">Twinmotion</span>
+                <span class="skill-level">Avanzado</span>
+              </div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="82"></div></div>
+            </div>
+            <div class="skill-card" id="skill-d5">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="8" fill="#E6D5BE"/><text x="20" y="26" font-family="Inter" font-size="12" font-weight="700" fill="#7A6C5D" text-anchor="middle">D5</text></svg>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">D5 Render</span>
+                <span class="skill-level">Intermedio</span>
+              </div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="72"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Diseño Gráfico -->
+        <div class="skill-category reveal" data-delay="250">
+          <h3 class="skill-cat-title">Diseño Gráfico</h3>
+          <div class="skill-cards">
+            <div class="skill-card" id="skill-ps">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="8" fill="#E6D5BE"/><text x="20" y="26" font-family="Inter" font-size="11" font-weight="700" fill="#7A6C5D" text-anchor="middle">Ps</text></svg>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">Photoshop</span>
+                <span class="skill-level">Avanzado</span>
+              </div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="85"></div></div>
+            </div>
+            <div class="skill-card" id="skill-ai">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="8" fill="#E6D5BE"/><text x="20" y="26" font-family="Inter" font-size="11" font-weight="700" fill="#7A6C5D" text-anchor="middle">Ai</text></svg>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">Illustrator</span>
+                <span class="skill-level">Avanzado</span>
+              </div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="80"></div></div>
+            </div>
+            <div class="skill-card" id="skill-id">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="8" fill="#E6D5BE"/><text x="20" y="26" font-family="Inter" font-size="11" font-weight="700" fill="#7A6C5D" text-anchor="middle">Id</text></svg>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">InDesign</span>
+                <span class="skill-level">Intermedio</span>
+              </div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="75"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SIG & Otros -->
+        <div class="skill-category reveal" data-delay="300">
+          <h3 class="skill-cat-title">SIG & Otros</h3>
+          <div class="skill-cards">
+            <div class="skill-card" id="skill-qgis">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="8" fill="#E6D5BE"/><text x="20" y="26" font-family="Inter" font-size="10" font-weight="700" fill="#7A6C5D" text-anchor="middle">QGIS</text></svg>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">QGIS</span>
+                <span class="skill-level">Básico</span>
+              </div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="60"></div></div>
+            </div>
+            <div class="skill-card" id="skill-office">
+              <div class="skill-icon-wrap">
+                <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect width="40" height="40" rx="8" fill="#E6D5BE"/><text x="20" y="26" font-family="Inter" font-size="10" font-weight="700" fill="#7A6C5D" text-anchor="middle">MS</text></svg>
+              </div>
+              <div class="skill-info">
+                <span class="skill-name">MS Office</span>
+                <span class="skill-level">Avanzado</span>
+              </div>
+              <div class="skill-bar-wrap"><div class="skill-bar" data-width="90"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── PROYECTOS ───────── -->
+  <section class="section projects-section" id="proyectos" aria-labelledby="projects-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-number">03</span>
+        <h2 class="section-title" id="projects-title">Proyectos</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-filter reveal" data-delay="100" role="group" aria-label="Filtrar proyectos">
+        <button class="filter-btn active" data-filter="all" id="filter-all">Todos</button>
+        <button class="filter-btn" data-filter="vivienda" id="filter-vivienda">Vivienda</button>
+        <button class="filter-btn" data-filter="urbano" id="filter-urbano">Urbano</button>
+        <button class="filter-btn" data-filter="equipamiento" id="filter-equipamiento">Equipamiento</button>
+        <button class="filter-btn" data-filter="investigacion" id="filter-investigacion">Investigación</button>
+      </div>
+      <div class="projects-grid" id="projects-grid">
+
+        <article class="project-card reveal" data-delay="100" data-category="vivienda" id="proj-vivienda">
+          <div class="project-img-wrap">
+            <img src="assets/project_vivienda.jpg" alt="Vivienda Multifamiliar – Proyecto arquitectónico" loading="lazy" />
+            <div class="project-overlay">
+              <button class="project-view-btn" onclick="openModal('vivienda')" aria-label="Ver proyecto Vivienda Multifamiliar">Ver Proyecto <i class="ph ph-arrow-up-right"></i></button>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-cat">Vivienda</span>
+              <span class="project-year">2024</span>
+            </div>
+            <h3 class="project-name">Vivienda Multifamiliar</h3>
+            <p class="project-desc">Diseño de conjunto habitacional sostenible con énfasis en espacios comunitarios, ventilación natural y eficiencia energética en contexto urbano limeño.</p>
+            <button class="project-btn" onclick="openModal('vivienda')" aria-label="Ver proyecto Vivienda Multifamiliar">Ver Proyecto <i class="ph ph-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-delay="150" data-category="urbano" id="proj-urbano">
+          <div class="project-img-wrap">
+            <img src="assets/project_urbano.jpg" alt="Proyecto Urbano – Espacio público contemporáneo" loading="lazy" />
+            <div class="project-overlay">
+              <button class="project-view-btn" onclick="openModal('urbano')" aria-label="Ver proyecto Urbano">Ver Proyecto <i class="ph ph-arrow-up-right"></i></button>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-cat">Urbano</span>
+              <span class="project-year">2023</span>
+            </div>
+            <h3 class="project-name">Proyecto Urbano</h3>
+            <p class="project-desc">Intervención urbana integral en espacio público con recuperación de áreas verdes, mobiliario contemporáneo y conectividad peatonal estratégica.</p>
+            <button class="project-btn" onclick="openModal('urbano')" aria-label="Ver proyecto Urbano">Ver Proyecto <i class="ph ph-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-delay="200" data-category="equipamiento" id="proj-mercado">
+          <div class="project-img-wrap">
+            <img src="assets/project_mercado.jpg" alt="Mercado Metropolitano – Diseño arquitectónico" loading="lazy" />
+            <div class="project-overlay">
+              <button class="project-view-btn" onclick="openModal('mercado')" aria-label="Ver proyecto Mercado Metropolitano">Ver Proyecto <i class="ph ph-arrow-up-right"></i></button>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-cat">Equipamiento</span>
+              <span class="project-year">2023</span>
+            </div>
+            <h3 class="project-name">Mercado Metropolitano</h3>
+            <p class="project-desc">Reinterpretación contemporánea del mercado tradicional limeño como nodo cultural, comercial y social con estructura metálica y cubierta vegetal.</p>
+            <button class="project-btn" onclick="openModal('mercado')" aria-label="Ver proyecto Mercado Metropolitano">Ver Proyecto <i class="ph ph-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-delay="250" data-category="equipamiento" id="proj-equip">
+          <div class="project-img-wrap">
+            <img src="assets/project_equipamiento.jpg" alt="Equipamiento Arquitectónico – Centro cultural" loading="lazy" />
+            <div class="project-overlay">
+              <button class="project-view-btn" onclick="openModal('equipamiento')" aria-label="Ver proyecto Equipamiento">Ver Proyecto <i class="ph ph-arrow-up-right"></i></button>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-cat">Equipamiento</span>
+              <span class="project-year">2022</span>
+            </div>
+            <h3 class="project-name">Equipamiento Arquitectónico</h3>
+            <p class="project-desc">Centro cultural comunitario con programa mixto: biblioteca, talleres, auditorio y espacios de coworking integrados en un volumen paramétrico.</p>
+            <button class="project-btn" onclick="openModal('equipamiento')" aria-label="Ver proyecto Equipamiento">Ver Proyecto <i class="ph ph-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-delay="300" data-category="investigacion" id="proj-invest">
+          <div class="project-img-wrap">
+            <img src="assets/project_investigacion.jpg" alt="Investigación Urbana – Análisis Lima" loading="lazy" />
+            <div class="project-overlay">
+              <button class="project-view-btn" onclick="openModal('investigacion')" aria-label="Ver proyecto Investigación">Ver Proyecto <i class="ph ph-arrow-up-right"></i></button>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-cat">Investigación</span>
+              <span class="project-year">2024</span>
+            </div>
+            <h3 class="project-name">Investigación Urbana</h3>
+            <p class="project-desc">Análisis territorial y cartografía urbana de densidad, movilidad y espacio público en distritos periféricos de Lima Metropolitana con herramientas SIG.</p>
+            <button class="project-btn" onclick="openModal('investigacion')" aria-label="Ver proyecto Investigación">Ver Proyecto <i class="ph ph-arrow-right"></i></button>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-delay="350" data-category="vivienda" id="proj-renders">
+          <div class="project-img-wrap">
+            <img src="assets/project_renders.jpg" alt="Renderizados Arquitectónicos – Visualización digital" loading="lazy" />
+            <div class="project-overlay">
+              <button class="project-view-btn" onclick="openModal('renders')" aria-label="Ver Renderizados">Ver Proyecto <i class="ph ph-arrow-up-right"></i></button>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-meta">
+              <span class="project-cat">Visualización</span>
+              <span class="project-year">2025</span>
+            </div>
+            <h3 class="project-name">Renderizados Arquitectónicos</h3>
+            <p class="project-desc">Colección de visualizaciones fotorrealistas desarrolladas en Twinmotion y D5 Render, interiores y exteriores con iluminación HDR y materiales PBR.</p>
+            <button class="project-btn" onclick="openModal('renders')" aria-label="Ver Renderizados">Ver Proyecto <i class="ph ph-arrow-right"></i></button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── EXPERIENCIA ───────── -->
+  <section class="section experience-section" id="experiencia" aria-labelledby="exp-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-number">04</span>
+        <h2 class="section-title" id="exp-title">Experiencia</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="exp-intro reveal">
+        <p>Línea de tiempo en construcción. Próximamente se incorporarán prácticas profesionales, asistencias en proyectos, concursos y talleres.</p>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item reveal" data-delay="100" id="exp-item-1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2026</div>
+          <div class="timeline-card">
+            <div class="timeline-tag">Próximo</div>
+            <h3 class="timeline-title">Prácticas Profesionales</h3>
+            <p class="timeline-desc">Próximas incorporaciones en estudios de arquitectura o empresas constructoras de Lima.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-delay="150" id="exp-item-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2025</div>
+          <div class="timeline-card">
+            <div class="timeline-tag">Taller</div>
+            <h3 class="timeline-title">Talleres de Diseño Avanzado</h3>
+            <p class="timeline-desc">Participación en talleres de diseño paramétrico, render y representación arquitectónica avanzada.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-delay="200" id="exp-item-3">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2024</div>
+          <div class="timeline-card">
+            <div class="timeline-tag">Concurso</div>
+            <h3 class="timeline-title">Concursos de Arquitectura</h3>
+            <p class="timeline-desc">Participación en concursos académicos de diseño arquitectónico y urbano a nivel nacional.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-delay="250" id="exp-item-4">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2023</div>
+          <div class="timeline-card">
+            <div class="timeline-tag">Investigación</div>
+            <h3 class="timeline-title">Investigación Académica</h3>
+            <p class="timeline-desc">Desarrollo de estudios urbanos y territoriales en el marco de la carrera de Arquitectura en la UNI.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-delay="300" id="exp-item-5">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2019</div>
+          <div class="timeline-card">
+            <div class="timeline-tag">Inicio</div>
+            <h3 class="timeline-title">Universidad Nacional de Ingeniería</h3>
+            <p class="timeline-desc">Ingreso a la Facultad de Arquitectura, Urbanismo y Artes (FAUA) de la UNI. Inicio del recorrido formativo en diseño y urbanismo.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── LOGROS ───────── -->
+  <section class="section achievements-section" id="logros" aria-labelledby="ach-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-number">05</span>
+        <h2 class="section-title" id="ach-title">Logros</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="achievements-grid">
+
+        <div class="ach-card reveal" data-delay="100" id="ach-expo">
+          <div class="ach-icon">
+            <i class="ph ph-trophy"></i>
+          </div>
+          <div class="ach-content">
+            <div class="ach-tag">Exposición</div>
+            <h3 class="ach-title">Expo FAUA</h3>
+            <p class="ach-desc">Selección y exposición de proyectos en la muestra anual de la Facultad de Arquitectura, Urbanismo y Artes de la UNI, reconocido por excelencia en diseño.</p>
+          </div>
+          <div class="ach-year">UNI</div>
+        </div>
+
+        <div class="ach-card reveal" data-delay="150" id="ach-bienal">
+          <div class="ach-icon">
+            <i class="ph ph-medal"></i>
+          </div>
+          <div class="ach-content">
+            <div class="ach-tag">Internacional</div>
+            <h3 class="ach-title">Bienal Internacional de Arquitectura</h3>
+            <p class="ach-desc">Participación en la Bienal Internacional de Arquitectura de Lima, plataforma de intercambio para la nueva generación de arquitectos latinoamericanos.</p>
+          </div>
+          <div class="ach-year">Lima</div>
+        </div>
+
+        <div class="ach-card ach-card-featured reveal" data-delay="200" id="ach-pronabec">
+          <div class="ach-icon">
+            <i class="ph ph-star"></i>
+          </div>
+          <div class="ach-content">
+            <div class="ach-tag">Beca Nacional</div>
+            <h3 class="ach-title">Becario PRONABEC</h3>
+            <p class="ach-desc">Beneficiario del Programa Nacional de Becas y Crédito Educativo del gobierno peruano, reconocimiento al rendimiento académico sobresaliente.</p>
+          </div>
+          <div class="ach-year">Perú</div>
+        </div>
+
+        <div class="ach-card reveal" data-delay="250" id="ach-acad">
+          <div class="ach-icon">
+            <i class="ph ph-seal-check"></i>
+          </div>
+          <div class="ach-content">
+            <div class="ach-tag">Académico</div>
+            <h3 class="ach-title">Reconocimientos Académicos</h3>
+            <p class="ach-desc">Reconocimientos por rendimiento destacado en talleres de diseño y cursos de representación arquitectónica a lo largo de la carrera.</p>
+          </div>
+          <div class="ach-year">UNI</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── CONTACTO ───────── -->
+  <section class="section contact-section" id="contacto" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-number">06</span>
+        <h2 class="section-title" id="contact-title">Contacto</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal" data-delay="100">
+          <h3 class="contact-heading">¿Hablamos sobre<br /><em>arquitectura?</em></h3>
+          <p class="contact-sub">Estoy abierto a colaboraciones, prácticas profesionales, intercambios académicos y proyectos creativos.</p>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/michell-campos" target="_blank" rel="noopener noreferrer" class="social-link" id="social-linkedin" aria-label="LinkedIn de Michell Campos">
+              <i class="ph ph-linkedin-logo"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://github.com/michellcampos" target="_blank" rel="noopener noreferrer" class="social-link" id="social-github" aria-label="GitHub de Michell Campos">
+              <i class="ph ph-github-logo"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="https://instagram.com/michellcampos.arq" target="_blank" rel="noopener noreferrer" class="social-link" id="social-instagram" aria-label="Instagram de Michell Campos">
+              <i class="ph ph-instagram-logo"></i>
+              <span>Instagram</span>
+            </a>
+            <a href="https://behance.net/michellcampos" target="_blank" rel="noopener noreferrer" class="social-link" id="social-behance" aria-label="Behance de Michell Campos">
+              <i class="ph ph-behance-logo"></i>
+              <span>Behance</span>
+            </a>
+            <a href="mailto:michell.campos@uni.pe" class="social-link" id="social-email" aria-label="Correo electrónico">
+              <i class="ph ph-envelope-simple"></i>
+              <span>michell.campos@uni.pe</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form-wrap reveal" data-delay="200">
+          <form class="contact-form" id="contactForm" novalidate aria-label="Formulario de contacto">
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Nombre</label>
+              <input type="text" id="contact-name" name="name" class="form-input" placeholder="Tu nombre completo" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="contact-email" class="form-label">Correo electrónico</label>
+              <input type="email" id="contact-email" name="email" class="form-input" placeholder="tucorreo@ejemplo.com" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="contact-msg" class="form-label">Mensaje</label>
+              <textarea id="contact-msg" name="message" class="form-textarea" rows="5" placeholder="Cuéntame sobre tu proyecto o consulta..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-full" id="contact-submit">
+              Enviar Mensaje <i class="ph ph-paper-plane-tilt"></i>
+            </button>
+            <p class="form-success" id="formSuccess" role="alert" aria-live="polite">¡Mensaje enviado con éxito! Te responderé pronto.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── FOOTER ───────── -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-left">
+        <a href="#inicio" class="footer-logo" aria-label="Volver al inicio">MC</a>
+        <p class="footer-tagline">Diseñando espacios con visión urbana.</p>
+      </div>
+      <div class="footer-links" role="navigation" aria-label="Navegación pie de página">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div class="footer-right">
+        <p>© 2026 Michell Campos</p>
+        <p>Arquitectura · Universidad Nacional de Ingeniería</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ───────── BACK TO TOP ───────── -->
+  <button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Volver al inicio">
+    <i class="ph ph-arrow-up"></i>
+  </button>
+
+  <!-- ───────── PROJECT MODAL ───────── -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-container">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">
+        <i class="ph ph-x"></i>
+      </button>
+      <div class="modal-img-wrap">
+        <img src="" alt="" id="modalImg" />
+      </div>
+      <div class="modal-content">
+        <div class="modal-meta">
+          <span class="project-cat" id="modalCat"></span>
+          <span class="project-year" id="modalYear"></span>
+        </div>
+        <h2 class="modal-title" id="modal-title"></h2>
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="modal-tags" id="modalTags"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
