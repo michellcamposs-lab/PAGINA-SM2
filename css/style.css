@@ -972,6 +972,44 @@ body.cursor-hover .cursor-follower { width: 44px; height: 44px; border-color: va
    CONTACT
    ====================================================== */
 .contact-section { background: var(--bg-main); }
+.contact-linkedin-only {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0 20px;
+}
+.linkedin-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 48px;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: .03em;
+  text-decoration: none;
+  transition: var(--transition);
+  cursor: none;
+}
+.linkedin-cta-btn i {
+  font-size: 1.6rem;
+  color: #0077b5;
+  transition: var(--transition-fast);
+}
+.linkedin-cta-btn:hover {
+  background: var(--card);
+  border-color: #0077b5;
+  color: var(--text);
+  box-shadow: 0 8px 32px rgba(0,119,181,.15);
+  transform: translateY(-3px);
+}
+.linkedin-cta-btn:hover i {
+  transform: scale(1.15);
+}
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
